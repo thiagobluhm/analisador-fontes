@@ -40,7 +40,7 @@ Cada agente grava seu entregável em arquivo e devolve só um resumo curto com o
 - **Site**: despache `analise-fontes:rpa-navegador` com URL, ID, escopo e `PASTA DE SAÍDA = analise-<slug>/fonte/F<n>/`. Trate o retorno:
   - `ok` / `parcial` → siga; avise o usuário em uma linha o que ficou inacessível.
   - `requer_login` → pergunte se o usuário quer entrar manualmente na janela do navegador. Se sim, despache de novo dizendo "o usuário vai fazer login manualmente; aguarde". Nunca peça a senha no chat.
-  - `sem_navegador` → diga que o servidor Playwright do plugin não está ativo (ele precisa do Node.js e do app desktop) e ofereça analisar um PDF/print da página.
+  - `sem_navegador` → leia o erro devolvido. Se for navegador ausente, peça ao usuário para rodar UMA vez no Terminal do computador: `npx playwright install chrome` (instala o Google Chrome usado pelo Playwright) e avisar quando terminar; então despache o RPA de novo. Se o servidor Playwright nem estiver ativo, diga que ele precisa do app desktop e do Node.js 18+. Em último caso, ofereça analisar um PDF/print da página.
   - `anexos_encontrados` relevantes → pergunte se entram como fontes adicionais.
 - **Documento / apresentação**: extraia você mesmo para `fonte/F<n>/extrato.md` seguindo `references/captura-documentos.md` (localizador por página ou slide, notas do apresentador incluídas).
 

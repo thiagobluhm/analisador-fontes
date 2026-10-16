@@ -10,7 +10,7 @@ description: Acessa o site que o usuário indicar com o agente RPA (navegador Pl
 3. Despache `analise-fontes:rpa-navegador` em missão de captura com: `URL`, `ID da fonte = F1`, `ESCOPO`, `PASTA DE SAÍDA = captura-<slug>/`.
 4. Trate o retorno:
    - `requer_login` → pergunte se o usuário quer entrar manualmente na janela do navegador; se sim, despache de novo avisando que ele fará o login. Nunca peça senha no chat.
-   - `sem_navegador` → diga que o servidor Playwright do plugin não está ativo (precisa do app desktop e do Node.js instalado) e que, sem ele, a página não é acessada.
+   - `sem_navegador` → se o erro for navegador ausente, peça ao usuário para rodar uma vez no Terminal: `npx playwright install chrome`, e despache de novo quando ele avisar. Se o servidor nem estiver ativo, diga que precisa do app desktop e do Node.js 18+.
    - `parcial` → diga o que ficou de fora e por quê.
 5. Entregue o `extrato.md` (e as capturas, se pedidas) e diga em uma linha: quantas páginas, o que ficou inacessível, anexos encontrados.
 6. Ofereça em uma linha rodar a análise completa (skill `orquestrador-analise-fontes`) sobre esse extrato — a captura já feita é reaproveitada como `fonte/F1/`.

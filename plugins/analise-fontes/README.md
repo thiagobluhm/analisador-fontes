@@ -21,7 +21,11 @@ Analisa qualquer **site, documento ou apresentação** e entrega um relatório d
 ## Playwright (RPA)
 O servidor `playwright` (`@playwright/mcp`) roda no computador do usuário via `npx`, com perfil isolado (cada sessão começa sem cookies nem logins salvos).
 
-Requisitos: app desktop do Claude + **Node.js 18+**. Na primeira execução o `npx` baixa o pacote; se faltar navegador, o agente chama `browser_install`.
+Requisitos: app desktop do Claude + **Node.js 18+** + **Google Chrome**. Se o Chrome não estiver instalado, rode uma vez no Terminal:
+
+```
+npx playwright install chrome
+```
 
 Limites de segurança do RPA: somente leitura — não envia formulários, não compra, não aceita termos, não contorna CAPTCHA/paywall/bloqueio. Login: o usuário entra manualmente na janela; senhas nunca passam pelo chat.
 

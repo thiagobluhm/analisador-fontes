@@ -14,6 +14,7 @@ Claude (desktop): adicione este repositório como marketplace de plugins, ou ins
 
 ## Requisitos
 - Node.js 18+ (o agente RPA usa `@playwright/mcp` via `npx`)
+- Google Chrome — se não tiver, rode uma vez: `npx playwright install chrome`
 
 ## Arquitetura
 | Etapa | Agente | Função |
