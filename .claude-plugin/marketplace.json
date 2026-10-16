@@ -1,0 +1,17 @@
+{
+  "name": "analisador-fontes",
+  "owner": {
+    "name": "Thiago Bluhm"
+  },
+  "metadata": {
+    "description": "Plugins de análise de fontes (sites, documentos e apresentações) com agentes de riscos, controles e governança."
+  },
+  "plugins": [
+    {
+      "name": "analise-fontes",
+      "source": "./plugins/analise-fontes",
+      "description": "Analisa qualquer site, documento ou apresentação com RPA (Playwright) e 5 agentes encadeados — mapa da fonte, riscos, controles, verificação de evidências e síntese executiva.",
+      "version": "0.1.0"
+    }
+  ]
+}

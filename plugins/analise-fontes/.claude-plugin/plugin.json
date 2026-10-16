@@ -1,0 +1,9 @@
+{
+  "name": "analise-fontes",
+  "version": "0.1.0",
+  "description": "Analisa qualquer site, documento ou apresentação com 6 agentes encadeados — captura RPA (Playwright), mapa da fonte, riscos, controles, verificação de evidências e síntese executiva — com rastreabilidade até a fonte.",
+  "author": {
+    "name": "Thiago Bluhm"
+  },
+  "keywords": ["governanca", "riscos", "controles", "compliance", "playwright", "rpa", "analise-documental"]
+}
